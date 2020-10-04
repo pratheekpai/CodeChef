@@ -2,6 +2,19 @@
 
 using namespace std;
 
+int gcd_fast(int a, int b) {                                        // to calculate gcd using euclid's method
+  int m, n, rem;
+  m = a;
+  n = b;
+
+  while (n != 0) {
+        rem  = m % n;
+        m = n;
+        n = rem;
+  }
+ return m;
+}
+
 void covid_run(){
     int n, k, x, y, counter, gcd;
 
@@ -75,20 +88,6 @@ void covid_run(){
 
     cout << "YES\n";                                                // this YES is for those cases where there is no loop and eventually the counter will land surely land on your house(y) 
 }
-
-int gcd_fast(int a, int b) {                                        // to calculate gcd using euclid's method
-  int m, n, rem;
-  m = a;
-  n = b;
-
-  while (n != 0) {
-        rem  = m % n;
-        m = n;
-        n = rem;
-  }
- return m;
-}
-
 
 int main()
 {
