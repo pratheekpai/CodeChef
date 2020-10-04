@@ -33,18 +33,16 @@ void covid_run(){
 
     if(n % 2 == 0 && k % 2 == 0){                                 // if the given number of houses and the covid jump(k) is even then there is a loop made by the covid which affects only certain houses in the loop
         while(true){
-            if(counter == y){
+            if(counter == y){                                     // if your house(y) comes in the loop
                 cout << "YES\n";
                 return;
-            }
-            counter = (counter + k) % n;
-            if(counter == x){
+            }   
+            counter = (counter + k) % n;                          // updating counter of covid 
+            if(counter == x){                                     // if the loop starts again we have to exit it
                 cout << "NO\n";
                 return;
             }
         }
-        cout << "NO\n";
-        return;
     }
 
     if(n % k == 0){                                                // (another type of loop) if the number of jumps(k) divides the no. of houses(n) it creates a loop  
@@ -73,14 +71,12 @@ void covid_run(){
                 return;
             }
         }
-        cout << "NO\n";
-        return;
     }
 
     cout << "YES\n";                                                // this YES is for those cases where there is no loop and eventually the counter will land surely land on your house(y) 
 }
 
-int gcd_fast(int a, int b) {
+int gcd_fast(int a, int b) {                                        // to calculate gcd using euclid's method
   int m, n, rem;
   m = a;
   n = b;
