@@ -1,2 +1,2 @@
 # CodeChef
-My code answers for CodeChef Questions.
+My code for CodeChef contests.
